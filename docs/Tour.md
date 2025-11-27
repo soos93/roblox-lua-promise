@@ -28,7 +28,7 @@ There's actually a built-in function called [Promise.fromEvent](/api/Promise#fro
 :::
 
 ```lua
-local myFunction()
+local function myFunction()
 	return Promise.new(function(resolve, reject, onCancel)
 		local connection
 
@@ -49,7 +49,7 @@ myFunction():andThen(print)
 If you just want to wrap a single value in a Promise, you can use [Promise.resolve](/api/Promise#resolve):
 
 ```lua
-local myFunction()
+local function myFunction()
 	return Promise.resolve("Hello world!")
 end
 
